@@ -64,20 +64,20 @@ h1 {
 
 .control-container {
     display: flex;
-    align-items: center; /* Aligns items vertically */
-    justify-content: space-between; /* Ensures space between button and controls */
+    align-items: center; 
+    justify-content: space-between; 
 }
 
 .control-btn {
-    padding: 5px 10px; /* Smaller padding for compactness */
+    padding: 5px 10px; 
     border: none;
     border-radius: 5px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 10px; /* Space between button and slider */
-    white-space: nowrap; /* Prevent text from wrapping */
+    margin-right: 10px; 
+    white-space: nowrap; 
 }
 
 .control-btn:hover {
@@ -96,17 +96,17 @@ h1 {
 }
 
 input[type="range"], input[type="number"], input[type="color"] {
-    width: 100%; /* Allow input fields to take available space */
+    width: 100%; 
     border: 1px solid #ced4da;
     border-radius: 5px;
     padding: 5px;
 }
 
 input[type="number"] {
-    width: 60px; /* Limit width for temperature input */
+    width: 60px; 
 }
 
 input[type="color"] {
-    width: auto; /* Keep color input compact */
+    width: auto;
     margin-left: 10px;
 }
