@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Appliance Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Home Appliance Control</h1>
+        <div class="appliance-list">
+            <div class="appliance">
+                <i class="fas fa-fan"></i>
+                <div class="appliance-info">
+                    <h2>Fan</h2>
+                    <div class="control-container">
+                        <button class="control-btn" onclick="toggleAppliance('fan')">ON/OFF</button>
+                        <div class="slider-container">
+                            <label for="fan-speed">Speed:</label>
+                            <input id="fan-speed" type="range" min="1" max="5" value="3" onchange="controlFanSpeed(this.value)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appliance">
+                <i class="fas fa-snowflake"></i>
+                <div class="appliance-info">
+                    <h2>Air Conditioner</h2>
+                    <div class="control-container">
+                        <button class="control-btn" onclick="toggleAppliance('ac')">ON/OFF</button>
+                        <div class="slider-container">
+                            <label for="ac-temp">Temp:</label>
+                            <input id="ac-temp" type="number" min="16" max="30" value="22" onchange="controlACTemperature(this.value)" /> °C
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appliance">
+                <i class="fas fa-lightbulb"></i>
+                <div class="appliance-info">
+                    <h2>Lights</h2>
+                    <div class="control-container">
+                        <button class="control-btn" onclick="toggleAppliance('lights')">ON/OFF</button>
+                        <div class="slider-container">
+                            <label for="brightness">Brightness:</label>
+                            <input id="brightness" type="range" min="0" max="100" value="50" onchange="adjustBrightness(this.value)" />
+                        </div>
+                        <div class="color-container">
+                            <label for="light-color">Color:</label>
+                            <input id="light-color" type="color" onchange="changeLightColor(this.value)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appliance">
+                <i class="fas fa-tv"></i>
+                <div class="appliance-info">
+                    <h2>TV</h2>
+                    <div class="control-container">
+                        <button class="control-btn" onclick="toggleAppliance('tv')">ON/OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
